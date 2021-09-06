@@ -26,7 +26,7 @@ plant_1 = Plant.create(nickname: 'Aloe vera', family: 'Aloacés',
 puts 'plant_1 created'
 
 
-plant_2 = Plant.create(nickname: 'cactus cierge', name: 'Pilosocereus royenii',
+plant_2 = Plant.create(nickname: 'Cactus cierge', name: 'Pilosocereus royenii',
   family: 'Cactaceae', legend: "Dans Le Livre des superstitions, Mythes, croyances
   et légendes, Éloïse Mozzani, relate que selon la légende les épines de cactus
   repousseraient le mal et préviendrait de l'infortune. Elles mettraient également

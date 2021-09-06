@@ -1,0 +1,8 @@
+<h1>Les plantes</h1>
+
+<% @plants.each do |plant| %>
+  <h3><%= plant.nickname %></h3>
+  <p><b>Luminosité</b> : <%= plant.luminosity_subtitle %></p>
+  <p><b>Arrosage</b> : <%= plant.watering_subtitle %></p>
+  <p><b>Animaux</b> : <%= plant.pet_subtitle %></p>
+<% end %>
