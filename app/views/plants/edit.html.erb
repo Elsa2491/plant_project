@@ -1,0 +1,50 @@
+<h1>Ajouter une nouvelle plante</h1>
+
+<%= form_for @plant do |f| %>
+  <p><%= f.label :nickname, "Nom commun" %>
+  <%= f.text_field :nickname %>
+
+  <%= f.label :name, "Nom scientifique" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :family, "Famille" %>
+  <%= f.text_field :family %></p>
+
+  <p><%= f.label :legend, "Une rumeur circule dans les bas quartiers centurions" %>
+  <%= f.text_field :legend %></p>
+
+  <p><%= f.label :body, "Body" %>
+  <%= f.text_field :body %></p>
+
+  <p><%= f.label :quote, "Citation" %>
+  <%= f.text_field :quote %></p>
+
+  <p><%= f.label :luminosity_subtitle, "Luminosité" %>
+  <%= f.text_field :luminosity_subtitle %>
+
+  <%= f.label :luminosity_text, "Détails" %>
+  <%= f.text_field :luminosity_text %></p>
+
+  <p><%= f.label :watering_subtitle, "Arrosage" %>
+  <%= f.text_field :watering_subtitle %>
+
+  <%= f.label :watering_text, "Détails" %>
+  <%= f.text_field :watering_text %></p>
+
+  <p><%= f.label :pet_subtitle, "Animaux" %>
+  <%= f.text_field :pet_subtitle %>
+
+  <%= f.label :pet_text, "Détails" %>
+  <%= f.text_field :pet_text %></p>
+
+  <p><%= f.label :level_subtitle, "Niveau" %>
+  <%= f.text_field :level_subtitle %>
+
+  <%= f.label :level_text, "Détails" %>
+  <%= f.text_field :level_text %></p>
+
+  <p><%= f.label :body, "Body" %>
+  <%= f.text_field :body %></p>
+
+  <%= f.submit %>
+<% end %>

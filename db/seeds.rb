@@ -45,7 +45,7 @@ plant_3 = Plant.create(nickname: 'Silver plant', name: 'Calathea orbifolia',
   être vivant, et surtout de leur montrer comment en prendre soin. Révéler la
   part sensible et poétique des phénomènes qui nous environnent.",
   luminosity_subtitle: 'faible', luminosity_text: 'Nord, pièce ombragée ou mi-ombre',
-  watering_subtitle: 'Terrau humide en permanence (attention, pas détrempé !)',
+  watering_subtitle: 'terrau humide en permanence (attention, pas détrempé !)',
   watering_text: "Arroser avec de l'eau distillée , si les feuilles brunissent
   ça peut venir d'un air trop sec, d'un excès d'engrais ou d'un arrosage avec de
   l'eau calcaire", pet_subtitle: "pas dangereuse", level_subtitle: "Une main bien verte quand même.",

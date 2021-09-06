@@ -1,9 +1,9 @@
 <h1><%= @plant.nickname %></h1>
 <p><b>Nom scientifique</b> : <%= @plant.name %></p>
 <p><b>Famille</b> : <%= @plant.family %></p>
-<p><%= @plant.legend %></p>
-<p><%= @plant.body %></p>
-<p><%= @plant.quote %></p>
+<p><b>Légende</b> <%= @plant.legend %></p>
+<p><b>Body</b> <%= @plant.body %></p>
+<p><b>Citation</b> <i><%= @plant.quote %></i></p>
 <p><b>Luminosité</b> : <%= @plant.luminosity_subtitle %></p>
 <p><%= @plant.luminosity_text %></p>
 <p><b>Arrosage</b> : <%= @plant.watering_subtitle %></p>
@@ -12,3 +12,4 @@
 <p><%= @plant.pet_text %></p>
 <p><b>Niveau</b> : <%= @plant.level_subtitle %></p>
 <p><%= @plant.level_text %></p>
+<%= link_to "Retour", plants_path %>
