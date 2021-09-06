@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: %i[show edit update destroy]
+
   def index
     @plants = Plant.all
   end
@@ -12,7 +13,7 @@ class PlantsController < ApplicationController
   end
 
   def create
-    @plant = Plant.create(params[:plant])
+    @plant = Plant.create(plant_params)
     @plant.save
     redirect_to plants_path
   end
@@ -22,7 +23,7 @@ class PlantsController < ApplicationController
 
   def update
     @plant.update(plant_params)
-    redirect_to plant_path(@plant)
+    redirect_to plants_path
   end
 
   def destroy
@@ -33,7 +34,7 @@ class PlantsController < ApplicationController
   private
 
   def plant_params
-    params.require(:plant).permit(:nickname, :name, :family, :legend,
+      params.require(:plant).permit(:nickname, :name, :family, :legend,
     :body, :quote, :luminosity_subtitle, :luminosity_text, :watering_subtitle,
     :watering_text, :pet_subtitle, :pet_text, :level_subtitle, :level_text)
   end
