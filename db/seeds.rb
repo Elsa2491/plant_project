@@ -136,5 +136,8 @@ plants = Plant.create!([
   }
 ])
 
+puts 'All plants are created. Creating quizzes'
 
-puts 'All plants are created'
+quizzes = Quiz.create!(name: 'Trouver la plante idéale')
+
+puts 'All quizzes are created.'

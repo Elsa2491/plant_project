@@ -1,0 +1,8 @@
+<h1>Les quizzes</h1>
+
+<% @quizzes.each do |quiz| %>
+  <p><%= quiz.name %></p>
+  <%= link_to "Voir le quiz : #{quiz.name}", quiz_path(quiz) %>
+  - <%= link_to "Modifier", edit_quiz_path(quiz) %>
+  - <%= link_to 'Supprimer', quiz_path(quiz), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer #{quiz.name} ?"} %>
+<% end %>
