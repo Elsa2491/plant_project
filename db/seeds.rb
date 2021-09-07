@@ -140,4 +140,9 @@ puts 'All plants are created. Creating quizzes'
 
 quizzes = Quiz.create!(name: 'Trouver la plante idéale')
 
-puts 'All quizzes are created.'
+puts 'All quizzes are created. Creating categories'
+
+
+categories = Category.create!([{name: 'Luminosité'}, {name: 'Arrosage'}])
+
+puts 'All categories are created.'

@@ -1,0 +1,11 @@
+<h1>Les Catégories</h1>
+
+<%= link_to 'Ajouter une catégorie', new_category_path %>
+
+
+<% @categories.each do |category| %>
+  <p><%= category.name %>
+  <%= link_to "Voir la catégorie : #{category.name}", category_path(category) %>
+  - <%= link_to "Modifier", edit_category_path(category) %>
+  - <%= link_to 'Supprimer', category_path(category), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer la catégorie : '#{category.name}' ?".capitalize} %></p>
+<% end %>
