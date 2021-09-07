@@ -16,68 +16,124 @@ puts 'Creating plants'
 
 
 plants = Plant.create!([
-  {nickname: 'Aloe vera', luminosity_subtitle: 'Vive',
-  watering_subtitle: 'Faible', pet_subtitle: 'Toxique'},
+  {
+    nickname: 'Aloe vera',
+    luminosity_subtitle: 'Très lumineuse ou lumineuse',
+    # luminosity_text: 'Avec ou sans soleil direct',
+    watering_subtitle: 'Très rarement',
+    pet_subtitle: 'Toxique'
+  },
 
-  {nickname: 'Cactus cierge', luminosity_subtitle: "Vive",
-  watering_subtitle: 'Faible', pet_subtitle: 'Toxique'},
+  {nickname: 'Cactus cierge',
+    luminosity_subtitle: 'Très lumineuse ou lumineuse',
+    # luminosity_text: 'Avec ou sans soleil direct',
+    watering_subtitle: 'Très rarement',
+    pet_subtitle: 'Toxique'
+  },
 
-  {nickname: 'Silver plant', luminosity_subtitle: 'Faible',
-  watering_subtitle: "Beaucoup d'eau", pet_subtitle: "Non toxique"},
+  {nickname: 'Calathea (Silver plant)',
+    luminosity_subtitle: 'Peu lumineuse ou sombre',
+    watering_subtitle: "Terreau humide",
+    pet_subtitle: "Non toxique"
+  },
 
-  {nickname: 'Chaîne de cœurs', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Non toxique"},
+  {nickname: 'Chaîne de cœurs',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+   # luminosity_text: 'Convient aussi aux pièces peu lumineuses',
+    watering_subtitle: "Très rarement",
+    pet_subtitle: "Non toxique"
+  },
 
-  {nickname: 'Chlorophytum', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+  {nickname: 'Chlorophytum',
+    luminosity_subtitle: 'Très lumineuse ou lumineuse',
+    # luminosity_text: 'Convient aussi aux pièces très lumineuses',
+    watering_subtitle: "Fréquemment",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Arbre de Jade', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Arbre de Jade',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+    watering_subtitle: "Très rarement",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Euphorbe', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Euphorbe',
+    luminosity_subtitle: "S'adapte à tous les éclairages",
+    watering_subtitle: "Très rarement",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Caoutchouc', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Caoutchouc',
+    luminosity_subtitle: 'Lumineuse ou peu',
+    watering_subtitle: "Fréquemment",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Fittonia', luminosity_subtitle: 'Faible',
-  watering_subtitle: "Beaucoup d'eau", pet_subtitle: "Toxique"},
+  {nickname: 'Fittonia',
+    luminosity_subtitle: 'Peu lumineuse ou sombre',
+    watering_subtitle: "Terreau humide",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: "Fougère nid d'oiseau", luminosity_subtitle: 'Faible',
-  watering_subtitle: "Beaucoup d'eau", pet_subtitle: "Toxique"},
+  {nickname: "Fougère nid d'oiseau",
+    luminosity_subtitle: 'Peu lumineuse ou sombre',
+    watering_subtitle: "Terreau humide",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Haworthia', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Haworthia',
+    luminosity_subtitle: 'Très lumineuse ou lumineuse',
+    watering_subtitle: 'Très rarement',
+    pet_subtitle: 'Toxique'
+  },
 
-  {nickname: 'Misère', luminosity_subtitle: 'Normal',
-  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+  {nickname: 'Misère verte',
+    luminosity_subtitle: "S'adapte à tous les éclairages",
+    watering_subtitle: "Fréquemment",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Misère pourpre', luminosity_subtitle: 'Normal',
-  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+  {nickname: 'Peperomia',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+    watering_subtitle: "Rarement",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Misère zébrina', luminosity_subtitle: 'Normal',
-  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+  {nickname: 'Monstera',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+    watering_subtitle: "Fréquemment",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Collier de Jade (Peperomia)', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Pilea',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+    watering_subtitle: "Fréquemment",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Philodendron', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Pothos argenté',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+    watering_subtitle: "Rarement",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Pilea', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Golden pothos',
+    luminosity_subtitle: 'Lumineuse ou peu lumineuse',
+    watering_subtitle: "Rarement",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Pothos argenté', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Langue de belle-mère',
+    luminosity_subtitle: "S'adapte à tous les éclairages",
+    watering_subtitle: "Très rarement",
+    pet_subtitle: "Toxique"
+  },
 
-  {nickname: 'Golden pothos', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
-
-  {nickname: 'Langue de belle-mère', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
-
-  {nickname: 'Plante ZZ', luminosity_subtitle: 'Vive',
-  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+  {nickname: 'Plante ZZ',
+    luminosity_subtitle: "S'adapte à tous les éclairages",
+    watering_subtitle: "Très rarement",
+    pet_subtitle: "Toxique"
+  }
 ])
 
 
