@@ -15,43 +15,70 @@ puts 'Database cleaned'
 puts 'Creating plants'
 
 
+plants = Plant.create!([
+  {nickname: 'Aloe vera', luminosity_subtitle: 'Vive',
+  watering_subtitle: 'Faible', pet_subtitle: 'Toxique'},
 
-plant_1 = Plant.create(nickname: 'Aloe vera', family: 'Aloacés',
-  legend: "'Nicodème vint aussi, lui qui naguère était allé trouvé Jésus
-  au cours de la nuit. Il apportait un mélange de myrrhe et d'aloès
-  d'environt cent livres. Il prirent donc le corps de Jésus et
-  l'entourèrent de bandelettes, avec des aromates, suivant
-  la manière d'ensevelir les Juifs.' Jn 19.39-41", luminosity_subtitle: 'vive',
-  watering_subtitle: 'faible', pet_subtitle: 'toxique',level_subtitle: 'moyen')
-puts 'plant_1 created'
+  {nickname: 'Cactus cierge', luminosity_subtitle: "Vive",
+  watering_subtitle: 'Faible', pet_subtitle: 'Toxique'},
 
+  {nickname: 'Silver plant', luminosity_subtitle: 'Faible',
+  watering_subtitle: "Beaucoup d'eau", pet_subtitle: "Non toxique"},
 
-plant_2 = Plant.create(nickname: 'Cactus cierge', name: 'Pilosocereus royenii',
-  family: 'Cactaceae', legend: "Dans Le Livre des superstitions, Mythes, croyances
-  et légendes, Éloïse Mozzani, relate que selon la légende les épines de cactus
-  repousseraient le mal et préviendrait de l'infortune. Elles mettraient également
-  à l'abris des voleurs : posséder 4 cactus différents et les placer aux 4 coins
-  cardinaux éviterait les cambriolages", quote: "'Marie-toi avec l'infini, épouse un cactus'
-  Dans la noix du monde, Ferenc Rákóczy", luminosity_subtitle: "vive",
-  watering_subtitle: 'faible', pet_subtitle: 'toxique',level_subtitle: 'moyen')
-puts 'plant_2 created'
+  {nickname: 'Chaîne de cœurs', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Non toxique"},
 
+  {nickname: 'Chlorophytum', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
 
-plant_3 = Plant.create(nickname: 'Silver plant', name: 'Calathea orbifolia',
-  family: "Marantaceae", legend: "Le calathea est une plante 'qui produit du wifi'
-  Le 20 mars 2021, l’association Très Tôt Théâtre dans le cadre de son parcours
-  artistique l’Écume des Vent a placé des électrodes blanches sur les feuilles
-  d'un Calathéa ornata. L'objectif : apprendre aux enfants comment observer un
-  être vivant, et surtout de leur montrer comment en prendre soin. Révéler la
-  part sensible et poétique des phénomènes qui nous environnent.",
-  luminosity_subtitle: 'faible', luminosity_text: 'Nord, pièce ombragée ou mi-ombre',
-  watering_subtitle: 'terrau humide en permanence (attention, pas détrempé !)',
-  watering_text: "Arroser avec de l'eau distillée , si les feuilles brunissent
-  ça peut venir d'un air trop sec, d'un excès d'engrais ou d'un arrosage avec de
-  l'eau calcaire", pet_subtitle: "pas dangereuse", level_subtitle: "Une main bien verte quand même.",
-  level_text: "C'est une plante qui demande de l'attention, qui est sujette aux
-  nuisibles et qui exige de bien gérer l'arrosage.")
-puts 'plant_3 created'
+  {nickname: 'Arbre de Jade', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Euphorbe', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Caoutchouc', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Fittonia', luminosity_subtitle: 'Faible',
+  watering_subtitle: "Beaucoup d'eau", pet_subtitle: "Toxique"},
+
+  {nickname: "Fougère nid d'oiseau", luminosity_subtitle: 'Faible',
+  watering_subtitle: "Beaucoup d'eau", pet_subtitle: "Toxique"},
+
+  {nickname: 'Haworthia', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Misère', luminosity_subtitle: 'Normal',
+  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+
+  {nickname: 'Misère pourpre', luminosity_subtitle: 'Normal',
+  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+
+  {nickname: 'Misère zébrina', luminosity_subtitle: 'Normal',
+  watering_subtitle: "Modéré", pet_subtitle: "Toxique"},
+
+  {nickname: 'Collier de Jade (Peperomia)', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Philodendron', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Pilea', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Pothos argenté', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Golden pothos', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Langue de belle-mère', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+
+  {nickname: 'Plante ZZ', luminosity_subtitle: 'Vive',
+  watering_subtitle: "Faible", pet_subtitle: "Toxique"},
+])
 
 
 puts 'All plants are created'

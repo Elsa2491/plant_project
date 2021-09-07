@@ -34,7 +34,7 @@ class PlantsController < ApplicationController
   private
 
   def plant_params
-      params.require(:plant).permit(:nickname, :name, :family, :legend,
+    params.require(:plant).permit(:nickname, :name, :family, :legend,
     :body, :quote, :luminosity_subtitle, :luminosity_text, :watering_subtitle,
     :watering_text, :pet_subtitle, :pet_text, :level_subtitle, :level_text)
   end
@@ -42,5 +42,4 @@ class PlantsController < ApplicationController
   def set_plant
     @plant = Plant.find(params[:id])
   end
-
 end
