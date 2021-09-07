@@ -1,5 +1,6 @@
 <h1>Les plantes</h1>
 
+
 <% @plants.each do |plant| %>
   <h3><%= plant.nickname %></h3>
   <p><b>Luminosité</b> : <%= plant.luminosity_subtitle %></p>
@@ -9,3 +10,5 @@
   - <%= link_to "Modifier", edit_plant_path(plant) %>
   - <%= link_to "Supprimer", plant_path(plant), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer #{plant.nickname}"} %>
 <% end %>
+
+<%#= render 'quizzes/index' %>
