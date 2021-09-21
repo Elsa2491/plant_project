@@ -1,0 +1,4 @@
+<% @category.questions.each do |question| %>
+  <p> <%= question.body %>
+  - <%= link_to 'Supprimer', quiz_path(quiz), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer le quizz : '#{quiz.name}' ?".capitalize} %></p>
+<% end %>
