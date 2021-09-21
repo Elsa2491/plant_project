@@ -138,11 +138,13 @@ plants = Plant.create!([
 
 puts 'All plants are created. Creating quizzes'
 
-quizzes = Quiz.create!(name: 'Trouver la plante idéale')
+quiz_1 = Quiz.create!([{name: 'Trouver la plante idéale'}, {name: 'Quelle est cette plante ?'}])
+
 
 puts 'All quizzes are created. Creating categories'
 
 
-categories = Category.create!([{name: 'Luminosité'}, {name: 'Arrosage'}])
+categories = Category.create!([{name: 'Luminosité'}, {name: 'Arrosage'}, {name: 'Animaux'}])
+
 
 puts 'All categories are created.'

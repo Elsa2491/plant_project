@@ -1,9 +1,10 @@
 <h1>Les quizzes</h1>
 
 <%= link_to 'Ajouter un quiz', new_quiz_path  %>
+<%#= link_to 'Voir les catégories', quiz_categories_path(quizzes)  %>
+
 <% @quizzes.each do |quiz| %>
-  <p><%= quiz.name %>
-  <%= link_to "Voir le quiz : #{quiz.name}", quiz_path(quiz) %>
+  <p><%= link_to "#{quiz.name}", quiz_path(quiz) %>
   - <%= link_to "Modifier", edit_quiz_path(quiz) %>
   - <%= link_to 'Supprimer', quiz_path(quiz), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer le quizz : '#{quiz.name}' ?".capitalize} %></p>
 <% end %>
