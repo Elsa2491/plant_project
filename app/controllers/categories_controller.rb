@@ -9,14 +9,13 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @quiz = Quiz.find(params[:quiz_id])
     @category = Category.new
   end
 
   def create
     @category = Category.create(category_params)
     @category.save
-    redirect_to quiz_categories_path
+    redirect_to categories_path
   end
 
   def edit
@@ -24,12 +23,12 @@ class CategoriesController < ApplicationController
 
   def update
     @category.update(category_params)
-    redirect_to category_path
+    redirect_to categories_path
   end
 
   def destroy
     @category.destroy
-    redirect_to quizzes_path
+    redirect_to categories_path
   end
 
   private

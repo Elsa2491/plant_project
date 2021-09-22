@@ -1,8 +1,11 @@
 <h1>Les plantes</h1>
 
-<%= link_to 'Ajouter une plante', new_plant_path %>
+<p>
+<%= link_to 'Ajouter une plante', new_plant_path %> <br>
+<%= link_to 'Accéder aux quizzes', quizzes_path %>
+</p>
 
-<% @plants.each do |plant| %>
+<% @plants.order(created_at: :desc).each do |plant| %>
   <h3><%= plant.nickname %></h3>
   <p><b>Luminosité</b> : <%= plant.luminosity_subtitle %></p>
   <p><b>Arrosage</b> : <%= plant.watering_subtitle %></p>
