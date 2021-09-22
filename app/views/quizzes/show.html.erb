@@ -1,5 +1,12 @@
 <p>Nom du quiz : <%= @quiz.name %></p>
 
+<%= link_to 'Ajouter une question',  new_quiz_question_path(@quiz) %>
+
+<% @quiz.questions.order(created_at: :desc).each do |question| %>
+  <p><%= question.body %>
+  - <%= link_to "Modifier", edit_question_path(question) %>
+  - <%= link_to 'Supprimer', question_path(question), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer le quizz : '#{question.body}' ?".capitalize} %></p>
+<% end %>
 
 <%= link_to 'Retour', quizzes_path %>
 
