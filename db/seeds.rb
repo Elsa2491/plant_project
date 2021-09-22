@@ -169,3 +169,5 @@ questions = Question.create!([
 
 puts 'All questions are created.'
 
+puts 'End'
+
