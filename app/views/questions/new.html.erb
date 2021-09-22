@@ -1,0 +1,5 @@
+<%= simple_form_for ([@quiz, @question]) do |f| %>
+  <%= f.label :body, "Question" %>
+  <%= f.text_field :body %>
+  <%= f.submit %>
+<% end %>

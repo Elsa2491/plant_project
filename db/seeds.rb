@@ -147,4 +147,27 @@ puts 'All quizzes are created. Creating categories'
 categories = Category.create!([{name: 'Luminosité'}, {name: 'Arrosage'}, {name: 'Animaux'}])
 
 
-puts 'All categories are created.'
+puts 'All categories are created. Creating questions'
+
+questions = Question.create!([
+  {
+    body: 'La pièce dans laquelle je veux mettre ma plante est orientée',
+    quiz: Quiz.find(1),
+    category: Category.find(1)
+  },
+  {
+    body: 'Je veux mettre ma plante dans une pièce',
+    quiz: Quiz.find(1),
+    category: Category.find(1)
+  },
+  {
+    body: "J'arrose mes plantes",
+    quiz: Quiz.find(1),
+    category: Category.find(2)
+  }
+])
+
+puts 'All questions are created.'
+
+puts 'End'
+
