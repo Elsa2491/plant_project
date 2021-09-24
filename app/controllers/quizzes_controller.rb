@@ -10,12 +10,14 @@ class QuizzesController < ApplicationController
 
   def new
     @quiz = Quiz.new
+    @quiz.questions.build.build_category
   end
 
   def create
     @quiz = Quiz.create(quiz_params)
-    @quiz.save
-    redirect_to quizzes_path
+    return redirect_to @quiz, notice: "Question créée" if @quiz.save
+
+    render :new
   end
 
   def edit
@@ -34,7 +36,7 @@ class QuizzesController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:name)
+    params.require(:quiz).permit(:name, questions_attributes: [:body, :_destroy, category_attributes: [:name]])
   end
 
   def set_quiz

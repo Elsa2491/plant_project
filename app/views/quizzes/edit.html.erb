@@ -1,5 +1,2 @@
-<%= form_for @quiz do |f| %>
-  <%= f.label :name, "Nom du quizz" %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+<%= "Modifier #{@quiz.name}" %>
+<%= render "form" %>

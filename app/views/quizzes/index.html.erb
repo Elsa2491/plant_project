@@ -1,7 +1,7 @@
 <h1>Les quizzes</h1>
 
 <p><%= link_to 'Ajouter un quiz', new_quiz_path  %>
-- <%= link_to 'Voir les catégories', categories_path  %></p>
+<%#= link_to 'Voir les catégories', categories_path  %></p>
 
 <% @quizzes.order(created_at: :desc).each do |quiz| %>
   <p><%= link_to "#{quiz.name}", quiz_path(quiz) %>

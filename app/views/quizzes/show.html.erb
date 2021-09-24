@@ -1,13 +1,16 @@
-<p>Nom du quiz : <%= @quiz.name %></p>
+<h1><%= @quiz.name %></h1>
 
-<%= link_to 'Ajouter une question',  new_quiz_question_path(@quiz) %>
+<%# = link_to 'Ajouter une question',  new_quiz_question_path(@quiz) %>
 
 <% @quiz.questions.order(created_at: :desc).each do |question| %>
-  <p><%= question.body %>
-  - <%= link_to "Modifier", edit_question_path(question) %>
-  - <%= link_to 'Supprimer', question_path(question), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer le quizz : '#{question.body}' ?".capitalize} %></p>
+  <p><%= question.body %> - <%= question.category.name %>
+<%= link_to "Edit recipe", edit_quiz_path(@quiz) %>
+  <%#= link_to "Modifier", edit_quiz_path() %>
+  <%#= link_to 'Supprimer', question_path(question), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer le quizz : '#{question.body}' ?".capitalize} %></p>
 <% end %>
 
 <%= link_to 'Retour', quizzes_path %>
+
+
 
 

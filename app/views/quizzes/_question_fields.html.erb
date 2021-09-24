@@ -1,0 +1,15 @@
+<%= f.fields_for :category do |category| %>
+  <%= render "category_fields", f: category %>
+<% end %>
+
+<%= f.label :question %>
+<%= f.text_field :body %>
+
+<div>
+  <%#= f.label :description %>
+  <%#= f.text_field :description %>
+<%= link_to_remove_association "remove question", f %>
+</div>
+
+
+
