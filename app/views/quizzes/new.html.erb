@@ -1,5 +1,32 @@
-<%= form_for @quiz do |f| %>
-  <%= f.label :name, "Nom du quizz" %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
+<p>Créer un quiz</p>
+
+<%= form_with model: @quiz do |quiz_form| %>
+  <% if @quiz.errors.any? %>
+    <div>
+      <h2><%= pluralize(@quiz.errors.count, 'error') %> prohibited this quiz from beign saved :</h2>
+      <ul>
+        <% @quiz.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= quiz_form.text_field :name, placeholder: "Nom du quiz" %>
+
+  <p>Ajouter des questions</p>
+
+  <%= quiz_form.fields_for :questions do |question_form| %>
+    <p>
+      <%= question_form.text_field :body, placeholder: 'Ajouter une question' %>
+      <%= question_form.fields_for :category do |category_form| %>
+        <%= category_form.text_field :name, placeholder: 'Catégorie' %>
+      <% end %>
+    </p>
+  <% end %>
+
+  <br>
+  <%= quiz_form.submit 'Créer' %>
 <% end %>
+<br>
+<%= link_to 'Retour', quizzes_path %>

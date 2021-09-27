@@ -138,34 +138,45 @@ plants = Plant.create!([
 
 puts 'All plants are created. Creating quizzes'
 
-quiz_1 = Quiz.create!([{name: 'Trouver la plante idéale'}, {name: 'Quelle est cette plante ?'}])
+plante_ideale = Quiz.find_or_create_by(name: 'Trouver la plante idéale')
+quelle_plante = Quiz.find_or_create_by(name: 'Quelle est cette plante ?')
 
 
 puts 'All quizzes are created. Creating categories'
 
 
-categories = Category.create!([{name: 'Luminosité'}, {name: 'Arrosage'}, {name: 'Animaux'}])
+luminosite = Category.find_or_create_by(name: 'Luminosité')
+arrosage = Category.find_or_create_by(name: 'Arrosage')
+animaux = Category.find_or_create_by(name: 'Animaux')
+couleur = Category.find_or_create_by(name: 'Couleur')
 
 
 puts 'All categories are created. Creating questions'
 
-questions = Question.create!([
-  {
-    body: 'La pièce dans laquelle je veux mettre ma plante est orientée',
-    quiz: Quiz.find(1),
-    category: Category.find(1)
-  },
-  {
-    body: 'Je veux mettre ma plante dans une pièce',
-    quiz: Quiz.find(1),
-    category: Category.find(1)
-  },
-  {
-    body: "J'arrose mes plantes",
-    quiz: Quiz.find(1),
-    category: Category.find(2)
-  }
-])
+Question.find_or_create_by(quiz: Quiz.find(1),
+  category: Category.find(1),
+  body: 'La pièce dans laquelle je veux mettre ma plante est orientée')
+
+Question.find_or_create_by(quiz: Quiz.find(1),
+  category: Category.find(1),
+  body: 'La pièce reçoit du soleil direct')
+
+Question.find_or_create_by(quiz: Quiz.find(1),
+  category: Category.find(2),
+  body: "J'arrose mes plantes")
+
+Question.find_or_create_by(quiz: Quiz.find(1),
+  category: Category.find(3),
+  body: "J'ai des animaux")
+
+Question.find_or_create_by(quiz: Quiz.find(2),
+  category: Category.find(4),
+  body: 'La couleur des feuilles est unie')
+
+Question.find_or_create_by(quiz: Quiz.find(2),
+  category: Category.find(4),
+  body: 'De quelle couleur est le feuillage')
+
 
 puts 'All questions are created.'
 

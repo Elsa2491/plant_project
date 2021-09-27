@@ -1,43 +1,53 @@
 class QuizzesController < ApplicationController
-  before_action :set_quiz, only: %i[show edit update destroy]
-
   def index
     @quizzes = Quiz.all
   end
 
   def show
+    @quiz = Quiz.find(params[:id])
   end
 
   def new
     @quiz = Quiz.new
+    10.times { @quiz.questions.build.build_category }
   end
 
   def create
     @quiz = Quiz.create(quiz_params)
-    @quiz.save
-    redirect_to quizzes_path
+    respond_to do |format|
+      if @quiz.save
+        format.html { redirect_to @quiz, notice: 'Quiz was successully created' }
+        format.json { render :show, status: :created, location: @quiz }
+      else
+        format.html { render :new }
+        format.json { render json: @quiz.errors, status: :unproccessable_entity }
+      end
+    end
   end
 
   def edit
+    @quiz = Quiz.find(params[:id])
   end
 
   def update
-    @quiz.update(quiz_params)
-    redirect_to quizzes_path
+    @quiz = Quiz.find(params[:id])
+    if @quiz.update(quiz_params)
+      redirect_to @quiz
+    else
+      render :edit
+    end
   end
 
-  def destroy
-    @quiz.destroy
-    redirect_to quizzes_path
-  end
+    def destroy
+      @quiz = Quiz.find(params[:id])
+      @quiz.destroy
+
+      redirect_to quizzes_path
+    end
 
   private
 
   def quiz_params
-    params.require(:quiz).permit(:name)
-  end
-
-  def set_quiz
-    @quiz = Quiz.find(params[:id])
+    params.require(:quiz).permit(:name, questions_attributes: [:body, { category_attributes: [:name] }])
   end
 end
