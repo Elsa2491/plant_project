@@ -9,7 +9,7 @@ class QuizzesController < ApplicationController
 
   def new
     @quiz = Quiz.new
-    10.times { @quiz.questions.build.build_category }
+    3.times { @quiz.questions.build.build_category }
   end
 
   def create
