@@ -18,7 +18,11 @@
 
   <%= quiz_form.fields_for :questions do |question_form| %>
     <p>
-      <%= question_form.text_field :body, placeholder: 'Ajouter une question' %>
+      <%= render "question_fields", f: question_form %>
+      <div>
+        <%= link_to_add_association 'add question', quiz_form, :questions %>
+      </div>
+      <%#= question_form.text_field :body, placeholder: 'Ajouter une question' %>
       <%= question_form.fields_for :category do |category_form| %>
         <%= category_form.text_field :name, placeholder: 'Catégorie' %>
       <% end %>
