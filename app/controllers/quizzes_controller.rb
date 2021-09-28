@@ -9,7 +9,7 @@ class QuizzesController < ApplicationController
 
   def new
     @quiz = Quiz.new
-    3.times { @quiz.questions.build.build_category }
+    @quiz.questions.build.build_category
   end
 
   def create
@@ -38,12 +38,12 @@ class QuizzesController < ApplicationController
     end
   end
 
-    def destroy
-      @quiz = Quiz.find(params[:id])
-      @quiz.destroy
+  def destroy
+    @quiz = Quiz.find(params[:id])
+    @quiz.destroy
 
-      redirect_to quizzes_path
-    end
+    redirect_to quizzes_path
+  end
 
   private
 
