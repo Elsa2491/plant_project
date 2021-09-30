@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <%= f.label "question" %>
+    <%= f.text_field :body, placeholder: "Ajouter une question" %>
+  </div>
+
+    <%= f.fields_for :category do |category| %>
+      <%= render 'category_fields', f: category %>
+    <% end %>
+
+  <%= link_to_remove_association "remove the fucking question", f %>
+  <%#= link_to_remove_association "remove the fucking question", f, {wrapper_class: '.the_fucking_question'} %>
+</div>

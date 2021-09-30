@@ -9,7 +9,7 @@ class QuizzesController < ApplicationController
 
   def new
     @quiz = Quiz.new
-    3.times { @quiz.questions.build.build_category }
+    @quiz.questions.build.build_category
   end
 
   def create
@@ -38,16 +38,19 @@ class QuizzesController < ApplicationController
     end
   end
 
-    def destroy
-      @quiz = Quiz.find(params[:id])
-      @quiz.destroy
+  def destroy
+    @quiz = Quiz.find(params[:id])
+    @quiz.destroy
 
-      redirect_to quizzes_path
-    end
+    redirect_to quizzes_path
+  end
 
   private
 
   def quiz_params
-    params.require(:quiz).permit(:name, questions_attributes: [:body, { category_attributes: [:name] }])
+    params.require(:quiz).permit(:name,
+      questions_attributes: [:id, :body, :_destroy, {
+        category_attributes: %i[name id]
+      }])
   end
 end

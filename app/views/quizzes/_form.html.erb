@@ -1,0 +1,35 @@
+<%= simple_form_for @quiz do |quiz_form| %>
+  <% if @quiz.errors.any? %>
+    <div>
+      <h2><%= pluralize(@quiz.errors.count, 'error') %> prohibited this quiz from beign saved :</h2>
+      <ul>
+        <% @quiz.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= quiz_form.label 'Quiz' %>
+    <%= quiz_form.text_field :name, placeholder: "Nom du quiz" %>
+  </div>
+
+  <p>Les questions</p>
+
+  <div>
+  <%= quiz_form.fields_for :questions do |question_form| %>
+    <%= render "question_fields", f: question_form %>
+  <% end %>
+    <div>
+      <%= link_to_add_association 'Ajouter une question', quiz_form, :questions, wrap_object: Proc.new { |question| question.build_category; question } %>
+    </div>
+  </div>
+
+
+  <br>
+  <%= quiz_form.submit 'Créer' %>
+<% end %>
+<br>
+<%= link_to 'Retour', quizzes_path %>
+
