@@ -17,12 +17,14 @@
 
   <p>Les questions</p>
 
+  <div>
   <%= quiz_form.fields_for :questions do |question_form| %>
     <%= render "question_fields", f: question_form %>
   <% end %>
     <div>
       <%= link_to_add_association 'Ajouter une question', quiz_form, :questions, wrap_object: Proc.new { |question| question.build_category; question } %>
     </div>
+  </div>
 
 
   <br>
