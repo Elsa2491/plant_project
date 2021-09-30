@@ -153,28 +153,28 @@ couleur = Category.find_or_create_by(name: 'Couleur')
 
 puts 'All categories are created. Creating questions'
 
-Question.find_or_create_by(quiz: Quiz.find(1),
-  category: Category.find(1),
+Question.find_or_create_by(quiz: plante_ideale,
+  category: luminosite,
   body: 'La pièce dans laquelle je veux mettre ma plante est orientée')
 
-Question.find_or_create_by(quiz: Quiz.find(1),
-  category: Category.find(1),
+Question.find_or_create_by(quiz: plante_ideale,
+  category: luminosite,
   body: 'La pièce reçoit du soleil direct')
 
-Question.find_or_create_by(quiz: Quiz.find(1),
-  category: Category.find(2),
+Question.find_or_create_by(quiz: plante_ideale,
+  category: arrosage,
   body: "J'arrose mes plantes")
 
-Question.find_or_create_by(quiz: Quiz.find(1),
-  category: Category.find(3),
+Question.find_or_create_by(quiz: plante_ideale,
+  category: animaux,
   body: "J'ai des animaux")
 
-Question.find_or_create_by(quiz: Quiz.find(2),
-  category: Category.find(4),
+Question.find_or_create_by(quiz: quelle_plante,
+  category: couleur,
   body: 'La couleur des feuilles est unie')
 
-Question.find_or_create_by(quiz: Quiz.find(2),
-  category: Category.find(4),
+Question.find_or_create_by(quiz: quelle_plante,
+  category: couleur,
   body: 'De quelle couleur est le feuillage')
 
 

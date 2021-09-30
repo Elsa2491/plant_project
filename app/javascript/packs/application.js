@@ -22,6 +22,7 @@ require("channels")
 // ----------------------------------------------------
 require("jquery")
 require("@nathanvda/cocoon")
+//= require cocoon
 
 // External imports
 import "bootstrap";
