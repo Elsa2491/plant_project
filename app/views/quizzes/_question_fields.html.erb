@@ -4,14 +4,9 @@
     <%= f.text_field :body, placeholder: "Ajouter une question" %>
   </div>
 
-  <div>
     <%= f.fields_for :category do |category| %>
       <%= render 'category_fields', f: category %>
     <% end %>
-  </div>
 
-  <%= link_to_remove_association "Supprimer une question", f %>
+  <%= link_to_remove_association "remove the fucking question", f, {wrapper_class: '.adieu'} %>
 </div>
-
-
-

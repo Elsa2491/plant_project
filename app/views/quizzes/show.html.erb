@@ -6,6 +6,7 @@
   <% @quiz.questions.each do |question| %>
     <li>
       <%= question.body %>
+      (<%= question.category.name %>)
     </li>
   <% end %>
 </ul>

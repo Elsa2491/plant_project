@@ -48,6 +48,8 @@ class QuizzesController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:name, questions_attributes: [:body, { category_attributes: [:name] }])
+    params.require(:quiz).permit(:name, questions_attributes: [:id, :body, :_destroy, {
+      category_attributes: %i[name id]
+    }])
   end
 end
