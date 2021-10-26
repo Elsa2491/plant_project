@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :quizzes
   # resources :questions
   # resources :categories
-  root to: 'plants#index'
+  root to: 'pages#home'
 end
 
 
