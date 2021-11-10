@@ -2,7 +2,8 @@
 
 <p>
 <%= link_to 'Ajouter une plante', new_plant_path %> <br>
-<%= link_to 'Accéder aux quizzes', quizzes_path %>
+<%= link_to 'Accéder aux quizzes', quizzes_path %> <br>
+<%= link_to 'Retour', root_path %>
 </p>
 
 <% @plants.order(created_at: :desc).each do |plant| %>
