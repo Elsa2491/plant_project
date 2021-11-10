@@ -14,7 +14,7 @@
     <p><b>Animaux</b> : <%= plant.pet_subtitle %></p>
     <%= link_to "Découvrir la plante", plant_path(plant) %>
     - <%= link_to "Modifier", edit_plant_path(plant) %>
-    - <%= link_to "Supprimer", plant_path(plant), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer la plante : '#{plant.nickname}' ?".capitalize} %>
+    - <%= link_to "Supprimer #{plant.nickname}", plant_path(plant), method: :delete, data: {confirm: "Es-tu sûre de vouloir supprimer la plante : '#{plant.nickname}' ?".capitalize} %>
   </div>
 <% end %>
 
