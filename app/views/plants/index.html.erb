@@ -6,6 +6,19 @@
 <%= link_to 'Retour', root_path %>
 </p>
 
+<div class="menu-container">
+  <div class="row">
+    <div class="col-3" style="padding:0">
+      <%= select_tag "filter", options_for_select(['Selectionner une plante', 'Plante ZZ', 'Langue de belle-mère', 'aloe vera']), class:'custom-select' %>
+    </div>
+    <div class="col-1" style="padding:0">
+      <%= submit_tag "Search", class:'btn btn-dark', id:'search-submit', style:'' %>
+    </div>
+  </div>
+  <div id="menu-products-container">
+  </div>
+</div>
+
 <% @plants.order(created_at: :desc).each do |plant| %>
   <div class="card-product">
     <h3><%= plant.nickname %></h3>

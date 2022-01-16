@@ -3,6 +3,9 @@ class PlantsController < ApplicationController
 
   def index
     @plants = Plant.all
+    if params[:status].present?
+      @plants = Plant.where(status: params[:status])
+    end
   end
 
   def show

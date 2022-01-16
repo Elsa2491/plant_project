@@ -2,10 +2,23 @@
 
 <p><%= link_to 'Ajouter un quiz', new_quiz_path  %></p>
 
+<div class="menu-container">
+  <div class="row">
+    <div class="col-3" style="padding:0">
+      <%= select_tag "filter", options_for_select(['Selectionner une plante', 'Plantz ZZ', 'Langue de belle-mère', 'aloe vera']), class:'custom-select' %>
+    </div>
+    <div class="col-1" style="padding:0">
+      <%= submit_tag "Search", class:'btn btn-dark', id:'search-submit', style:'' %>
+    </div>
+  </div>
+  <div id="menu-products-container">
+  </div>
+</div>
+
+
 
 <% @quizzes.order(created_at: :asc).each do |quiz| %>
 <ul>
-
   <%= quiz.name %>
   <%= link_to 'Voir', quiz_path(quiz) %>
   - <%= link_to 'Modifier', edit_quiz_path(quiz)  %>
